@@ -4,6 +4,8 @@ import org.msila.treeexample.dao.TreeDao;
 import org.msila.treeexample.exception.TreeValidationException;
 import org.msila.treeexample.model.NodeRequest;
 import org.msila.treeexample.model.TreeNode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +14,7 @@ import java.util.Set;
 @Service
 public class TreeValidationServiceImpl implements TreeValidationService {
     private TreeDao treeDao;
+    private static Logger logger = LoggerFactory.getLogger(TreeValidationServiceImpl.class);
 
     @Autowired
     public TreeValidationServiceImpl(TreeDao treeDao) {
@@ -19,6 +22,7 @@ public class TreeValidationServiceImpl implements TreeValidationService {
     }
     @Override
     public void validateNodeRequest(NodeRequest nodeRequest) throws TreeValidationException {
+        logger.info(String.format("Validating Node Request %s",nodeRequest));
         if (nodeRequest == null) {
             throw new TreeValidationException("Request to add new nodes is null");
         }
@@ -34,6 +38,7 @@ public class TreeValidationServiceImpl implements TreeValidationService {
 
     @Override
     public void validateRequestNeedingNodeId(Integer treeNodeId) throws TreeValidationException {
+        logger.info(String.format("Validation Node Id %s",treeNodeId));
         if (treeNodeId == null) {
             throw new TreeValidationException("Node Id is null");
         }

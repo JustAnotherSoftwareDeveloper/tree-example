@@ -3,6 +3,13 @@ package org.msila.treeexample.model;
 import java.util.Objects;
 import java.util.Set;
 
+/**
+ * Node Request Object is used
+ * for adding nodes that
+ * are not at a root level
+ * It consists of the parent Id and
+ * the names of the nodes to add
+ */
 public class NodeRequest {
     private final Integer parent;
     private final Set<String> toAdd;

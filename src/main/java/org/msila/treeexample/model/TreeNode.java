@@ -3,6 +3,10 @@ package org.msila.treeexample.model;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * The main data object
+ * used to represent the tree
+ */
 public class TreeNode {
     private final String name;
     private final Integer id;

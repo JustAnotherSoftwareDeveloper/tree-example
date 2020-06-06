@@ -2,6 +2,11 @@ package org.msila.treeexample.model;
 
 import java.util.Objects;
 
+/**
+ * This is representative of
+ * a single row of the Tree table
+ * in the db.
+ */
 public class TreeDTO {
     private final Integer id;
     private final Integer parentId;
