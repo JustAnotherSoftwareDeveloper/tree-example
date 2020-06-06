@@ -47,4 +47,13 @@ public class TreeNode {
     public int hashCode() {
         return Objects.hash(name, id, children);
     }
+
+    @Override
+    public String toString() {
+        return "TreeNode{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", children=" + children +
+                '}';
+    }
 }
