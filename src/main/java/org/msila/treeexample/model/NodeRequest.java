@@ -4,15 +4,15 @@ import java.util.Objects;
 import java.util.Set;
 
 public class NodeRequest {
-    private final TreeNode parent;
+    private final Integer parent;
     private final Set<String> toAdd;
 
-    public NodeRequest(TreeNode parent, Set<String> toAdd) {
+    public NodeRequest(Integer parent, Set<String> toAdd) {
         this.parent = parent;
         this.toAdd = toAdd;
     }
 
-    public TreeNode getParent() {
+    public Integer getParent() {
         return parent;
     }
 
