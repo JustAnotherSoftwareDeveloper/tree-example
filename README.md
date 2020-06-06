@@ -1,7 +1,7 @@
 # tree-example
 This was given to me as a coding assignment. It represents adding and removing tree nodes from a database. The nodes cannot be identical in name
 
-##Technologies Used
+## Technologies Used
 * Spring Boot - This is a java framework centered around letting you bootstrap projects easily
 * H2 - This is an in memory database, so that I don't need to rely on a clunky mysql
 * Mockito - Common Java Testing Framework
